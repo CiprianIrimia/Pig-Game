@@ -15,6 +15,11 @@ const btnHold = document.querySelector(".btn--hold");
 let scores, currentScore, activePlayer, playing;
 // Starting conditions
 const resetGame = function () {
+  // Visible part
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
   // Stored data
   scores = [0, 0];
   currentScore = 0;
@@ -22,10 +27,6 @@ const resetGame = function () {
   playing = true;
 
   // Visible part
-  current0El.textContent = 0;
-  current1El.textContent = 0;
-  score0El.textContent = 0;
-  score1El.textContent = 0;
   diceEl.classList.add("hidden");
   document.querySelector(`.player--0`).classList.remove("player--winner");
   document.querySelector(`.player--1`).classList.remove("player--winner");
